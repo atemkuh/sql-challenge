@@ -64,6 +64,9 @@ SELECT * from Salaries;
 	Employees.emp_no = Salaries.emp_no;
 
 -- 2) List first name, last name, and hire date for employees who were hired in 1986.
+	select emp_no, first_name, last_name, hire_date from Employees
+	where hire_date >= '1985-12-31' and hire_date < '1987-01-01'
+	
 	
 -- 3) List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 

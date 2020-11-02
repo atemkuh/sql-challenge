@@ -81,6 +81,15 @@ SELECT * from Salaries;
 	Department_Manager.emp_no = Employees.emp_no;
 
 -- 4) List the department of each employee with the following information: employee number, last name, first name, and department name.
+	select Employees.emp_no, 
+	   Employees.last_name, 
+	   Employees.first_name,
+	   Departments.dept_name
+	from Employees
+	inner join Department_Manager on
+	Employees.emp_no = Department_Manager.emp_no
+	inner join Departments ON
+	Department_Manager.dept_no = Departments.dept_no;
 
 -- 5) List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 

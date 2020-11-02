@@ -69,6 +69,16 @@ SELECT * from Salaries;
 	
 	
 -- 3) List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+	select 	Departments.dept_no,
+			Departments.dept_name,
+			Department_Manager.emp_no,
+			Employees.last_name,
+	   		Employees.first_name
+	FROM Department_Manager
+	inner join Departments on 
+	Departments.dept_no = Departments.dept_no
+	inner join Employees on 
+	Department_Manager.emp_no = Employees.emp_no;
 
 -- 4) List the department of each employee with the following information: employee number, last name, first name, and department name.
 
